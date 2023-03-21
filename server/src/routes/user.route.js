@@ -73,13 +73,13 @@ router.get(
 );
 
 router.get(
-  "/favorites",
+  "/favorite",
   tokenMiddleware.auth,
   favoriteController.getFavoritesOfUser
 );
 
 router.post(
-  "/favorites",
+  "/favorite",
   tokenMiddleware.auth,
   body("mediaType")
     .exists().withMessage("mediaType is required")
@@ -98,7 +98,7 @@ router.post(
 );
 
 router.delete(
-  "/favorites/:favoriteId",
+  "/favorite/:favoriteId",
   tokenMiddleware.auth,
   favoriteController.removeFavorite
 );
