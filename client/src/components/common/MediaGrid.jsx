@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import MediaItem from './MediaItem';
 
 const MediaGrid = ({ medias, mediaType }) => {
+  console.log('asdad')
   return (
     <Grid container spacing={1} sx={{ marginRight: '-8px!important' }}>
       {medias.map((media, index) => (

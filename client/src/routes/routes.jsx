@@ -11,7 +11,7 @@ import ProtectedPage from '../components/common/ProtectedPage';
 export const routesGen = {
   home: '/',
   mediaList: (type) => `/${type}`,
-  mediaDetail: (type, id) => `${type}/${id}`,
+  mediaDetail: (type, id) => `/${type}/${id}`,
   mediaSearch: '/search',
   person: (id) => `/person/${id}`,
   favoriteList: '/favorite',

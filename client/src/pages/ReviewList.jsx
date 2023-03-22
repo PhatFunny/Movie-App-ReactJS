@@ -26,7 +26,7 @@ const ReviewItem = ({ review, onRemoved }) => {
 
     if (err) toast.error(err.message);
     if (response) {
-      toast.success("Remove favorite success");
+      toast.success("Remove review success");
       onRemoved(review.id);
     }
   }
@@ -103,7 +103,7 @@ const ReviewList = () => {
 
   const dispatch = useDispatch();
 
-  const skip = 8;
+  const skip = 2;
 
   useEffect(() => {
     const getReviews = async () => {
@@ -147,7 +147,9 @@ const ReviewList = () => {
               />
             </Box>
           ))}
-          {}
+          {filteredReviews.length < reviews.length && (
+            <Button onClick={onLoadMore}>load more</Button>
+          )}
         </Stack>
       </Container>
     </Box>
