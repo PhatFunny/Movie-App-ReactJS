@@ -34,17 +34,18 @@ const MediaItem = ({ media, mediaType }) => {
       setReleaseDate(media.release_date && media.release_date.split('-')[0]);
     } else {
       setReleaseDate(
-        media.first_air_date.split('-')[0] && media.first_air_date.split('-')[0]
+        media.first_air_date && media.first_air_date.split('-')[0]
       );
     }
 
     setRate(media.vote_average || media.mediaRate);
   }, [media, mediaType]);
+  console.log('vao day')
 
   return (
     <Link
       to={
-        media !== 'people'
+        mediaType !== 'people'
           ? routesGen.mediaDetail(mediaType, media.id || media.mediaId)
           : routesGen.person(media.id)
       }

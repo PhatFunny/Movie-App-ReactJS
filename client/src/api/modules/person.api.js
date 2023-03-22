@@ -25,3 +25,5 @@ const personApi = {
     }
   }
 }
+
+export default personApi
