@@ -40,7 +40,6 @@ const MediaItem = ({ media, mediaType }) => {
 
     setRate(media.vote_average || media.mediaRate);
   }, [media, mediaType]);
-  console.log('vao day')
 
   return (
     <Link

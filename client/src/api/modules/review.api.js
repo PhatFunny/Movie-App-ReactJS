@@ -33,7 +33,7 @@ const reviewApi = {
       return { err };
     }
   },
-  getList: async ({ reviewId }) => {
+  getList: async () => {
     try {
       const response = await privateClient.get(reviewEndpoints.list);
 
