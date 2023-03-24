@@ -21,3 +21,5 @@ Technologies:
   + Front-end: ReactJS + React Router + MaterialUI + Formik + Yup + Axios
   + Back-end: Express Rest API + Express Validator + JsonWebToken + Mongoose + Axios
   + Deploy: Vercel
+  
+ Link: https://phat-movie.vercel.app/
